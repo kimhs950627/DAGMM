@@ -53,9 +53,9 @@ class EstimationNet:
 
             # Last layer uses linear function (=logits)
             size = self.hidden_layer_sizes[-1]
-            logits = tf.layers.dense(z, size, activation=None, name="logits")
+            softmax = tf.layers.dense(z, size, activation=tf.nn.softmax, name="SoftMax")
 
             # Softmax output
-            output = tf.layers.softmax(logits)
+            #output = tf.layers.softmax(logits)
 
-        return output
+        return softmax
