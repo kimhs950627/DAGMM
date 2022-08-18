@@ -56,6 +56,6 @@ class EstimationNet:
             logits = tf.layers.dense(z, size, activation=None, name="logits")
 
             # Softmax output
-            output = tf.contrib.layers.softmax(logits)
+            output = tf.layers.softmax(logits)
 
         return output
