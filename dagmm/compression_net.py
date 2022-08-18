@@ -1,5 +1,5 @@
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 class CompressionNet:
     """ Compression Network.
     This network converts the input data to the representations
